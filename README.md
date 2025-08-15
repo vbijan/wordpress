@@ -84,3 +84,9 @@ Splice theme includes a custom REST API endpoint to fetch all Projects.
 ```bash
     curl -X GET https://yourwebsite.com/wp-json/splice/v1/projects
 ```
+
+## Login Credentials
+```bash
+  username : splice
+  password : splice2@25
+```
