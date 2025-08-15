@@ -1,0 +1,10 @@
+wp-admin/
+wp-includes/
+index.php
+wp-config.php
+license.txt
+readme.html
+
+# WordPress Content Uploads
+wp-content/uploads/
+wp-content/upgrade/
