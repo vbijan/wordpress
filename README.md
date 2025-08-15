@@ -25,7 +25,7 @@ Splice is a custom WordPress theme designed for showcasing projects in a respons
 
 ```bash
 git clone https://github.com/vbijan/wordpress.git
-
+```
 ## **Database Configuration**
 
 Ensure WordPress is connected to a MySQL database.  
@@ -38,7 +38,7 @@ define('DB_PASSWORD', 'your_database_password'); // Database password
 define('DB_HOST', 'localhost');                  // Usually 'localhost'
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
-
+```
 ## **Activate the Theme**
 
 1. Log in to WordPress Admin.  
@@ -78,9 +78,9 @@ Splice theme includes a custom REST API endpoint to fetch all Projects.
 **Endpoint URL:**
 ```bash
     GET https://yourwebsite.com/wp-json/splice/v1/projects
-
+```
 **Example Usage with cURL:**
 
 ```bash
     curl -X GET https://yourwebsite.com/wp-json/splice/v1/projects
-
+```
