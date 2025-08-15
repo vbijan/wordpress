@@ -26,38 +26,61 @@ Splice is a custom WordPress theme designed for showcasing projects in a respons
 ```bash
 git clone https://github.com/vbijan/wordpress.git
 
-1. **Database Configuration**  
-   Ensure WordPress is connected to a MySQL database.  
-   Edit `wp-config.php` in your WordPress root folder and configure:
+## **Database Configuration**
+
+Ensure WordPress is connected to a MySQL database.  
+Edit `wp-config.php` in your WordPress root folder and configure:
 
 ```php
-define('DB_NAME', 'your_database_name');       // Database name
-define('DB_USER', 'your_database_user');       // Database username
+define('DB_NAME', 'your_database_name');         // Database name
+define('DB_USER', 'your_database_user');         // Database username
 define('DB_PASSWORD', 'your_database_password'); // Database password
-define('DB_HOST', 'localhost');                // Usually 'localhost'
+define('DB_HOST', 'localhost');                  // Usually 'localhost'
 define('DB_CHARSET', 'utf8');
 define('DB_COLLATE', '');
 
-2. **Activate the Theme**  
-   - Log in to WordPress Admin.  
-   - Go to `Appearance → Themes`.  
-   - Find **Splice** and click **Activate**.
+## **Activate the Theme**
 
-3. **Configure Permalinks**  
-   - Navigate to `Settings → Permalinks`.  
-   - Select your preferred structure (recommended: **Post name**).  
-   - Click **Save Changes** to flush rewrite rules.  
-   > This ensures the Projects archive (`/projects/`) and single project URLs work correctly.
+1. Log in to WordPress Admin.  
+2. Go to `Appearance → Themes`.  
+3. Find **Splice** and click **Activate**.
+
+---
+
+## **Configure Permalinks**
+
+1. Navigate to `Settings → Permalinks`.  
+2. Select your preferred structure (recommended: **Post name**).  
+3. Click **Save Changes** to flush rewrite rules.  
+
+> This ensures the Projects archive (`/projects/`) and single project URLs work correctly.
+
+---
+
+## **Create Projects**
+
+1. In WordPress Admin, go to `Projects → Add New`.  
+2. Add the following for each project:
+   - **Title** – Project name  
+   - **Content** – Description or details  
+   - **Featured Image** – Displayed in archive and single pages  
+   - **Start Date** *(optional)* – Add a custom field `start_date` in `YYYY-MM-DD` format for filtering  
+3. Publish the project.  
+
+> After adding projects, visit `/projects/` to see the archive page with Bootstrap grid and optional date filtering.
+
+---
 
 ## **Custom REST API: Projects Endpoint**
 
-Splice theme includes a custom REST API endpoint to fetch all Projects. This allows external applications or front-end JavaScript to retrieve project data in JSON format.
+Splice theme includes a custom REST API endpoint to fetch all Projects.
 
 **Endpoint URL:**
-GET https://yourwebsite.com/wp-json/splice/v1/projects
-### **Request Method**
-
-*Example Usage with cURL:**
 ```bash
-curl -X GET http://localhost/splice/wp-json/splice/v1/projects
+    GET https://yourwebsite.com/wp-json/splice/v1/projects
+
+**Example Usage with cURL:**
+
+```bash
+    curl -X GET https://yourwebsite.com/wp-json/splice/v1/projects
 
